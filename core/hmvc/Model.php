@@ -6,19 +6,19 @@
  * and open the template in the editor.
  */
 
-namespace News\Controllers;
+namespace SkiPHP;
 
 /**
- * Description of Plop
+ * Description of Model
  *
  * @author Schyzo
  */
-class News
-{    
-    public function index()
+abstract class Model
+{
+    protected static $db;
+    
+    public static function setConn(\medoo $db)
     {
-        $manager = new \News\Models\NewsManager();
-        $news = $manager->getLastNews();
-
+        self::$db = $db;
     }
 }

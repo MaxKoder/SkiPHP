@@ -3,10 +3,15 @@
 function core_autoloader($class) 
 {
     $classes = array(
-        '\SkiPHP\Folder' => 'classes/files/Folder',
+        //Config folder
         '\SkiPHP\Config' => 'config/Config',
-        '\SkiPHP\Router' => 'router/Router',
-        '\SkiPHP\URI' => 'router/URI',
+        //HMVC folder
+        '\SkiPHP\Model' => 'hmvc/Model',
+        '\SkiPHP\Router' => 'hmvc/Router',
+        '\SkiPHP\URI' => 'hmvc/URI',
+        //Objects folder
+            //Files folder
+            '\SkiPHP\Folder' => 'classes/files/Folder',
     );
     if (substr($class, 0, 1) !== '\\')
     {

@@ -47,10 +47,9 @@ class Router
         $this->params = $commands;
     }
     
-    public function dispatch()
+    public function get_Callback()
     {
-        $callback = '\\' . $this->module . '\Controllers\\' . $this->controller;
-        call_user_func_array(array($callback, $this->method), $this->params);
+        return '\\' . $this->module . '\Controllers\\' . $this->controller;
     }
     
     protected function determine_Module($commands)
